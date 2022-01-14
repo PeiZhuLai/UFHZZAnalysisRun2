@@ -58,12 +58,13 @@ else:
 
 config.Data.publication = False
 #config.Data.outLFNDirBase = '/store/user/%s/2018data/UFHZZAnalysisRun2/JOBTAG/' % (getUsernameFromSiteDB())
-config.Data.outLFNDirBase = '/store/user/qguo/newNTuple_UL/UL2018/UFHZZAnalysisRun2/JOBTAG/'
+#config.Data.outLFNDirBase = '/store/user/qguo/newNTuple_UL/UL2018/UFHZZAnalysisRun2/JOBTAG/'
+config.Data.outLFNDirBase = '/store/user/zewang/JOBTAG/'
 config.Data.ignoreLocality = True
 config.Data.allowNonValidInputDataset = True
 
 config.section_('User')
 config.section_('Site')
-#config.Site.storageSite = 'T2_CN_Beijing'
-config.Site.storageSite = 'T2_US_Florida'
+config.Site.storageSite = 'T2_CN_Beijing'
+#config.Site.storageSite = 'T2_US_Florida'
 config.Site.whitelist = ['T2_US_*']
