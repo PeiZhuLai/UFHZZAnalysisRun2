@@ -54,6 +54,7 @@ git clone https://github.com/bachtis/Analysis.git -b KaMuCa_V4 KaMuCa
 git clone -b tmp_Ferrico https://github.com/ferrico/KinZfitter.git
 
 scramv1 b -j 8
+(SCRAM fatal: Unable to locate the top of local release. Please run this command from a SCRAM-based area.)
 
 voms-proxy-init --rfc --voms cms
 
