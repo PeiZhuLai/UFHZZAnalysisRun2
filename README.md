@@ -36,6 +36,8 @@ vi /DataFormats/EGammaCandidates/interface/photon.h
     float esEffSigmaRR()            const {return full5x5_showerShapeBlock_.effSigmaRR;}
     float esEnergyOverRawE()        const {return this->superCluster()->preshowerEnergy()/this->superCluster()->rawEnergy();}
 
+scram b clean
+
 ./install_UL.sh
 
 
