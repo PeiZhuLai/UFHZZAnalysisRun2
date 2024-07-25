@@ -39,6 +39,11 @@ mv EgammaPostRecoTools/python/EgammaPostRecoTools.py RecoEgamma/EgammaTools/pyth
 #git clone https://github.com/cms-data/EgammaAnalysis-ElectronTools.git EgammaAnalysis/ElectronTools/data/
 
 git clone -b ULSSfiles_correctScaleSysMC https://github.com/jainshilpi/EgammaAnalysis-ElectronTools.git EgammaAnalysis/ElectronTools/data/
+(scram b clean)
+
+mv mv UFHZZAnalysisRun2/install_UL.sh .
+
+./install_UL.sh 
 
 git cms-addpkg EgammaAnalysis/ElectronTools
 
