@@ -18,6 +18,29 @@ git cms-init
 
 git clone -b UL_10_6_26 https://github.com/PeiZhuLai/UFHZZAnalysisRun2.git
 
+cp UFHZZAnalysisRun2/install_UL.sh .
+
+./install_UL.sh
+
+git cms-addpkg DataFormats/EgammaCandidates
+
+vi /DataFormats/EGammaCandidates/interface/photon.h
+    /// variables added for MVA
+    float e2x2()                    const {return showerShapeBlock_.e2x2;}
+    float full5x5_e2x2()            const {return full5x5_showerShapeBlock_.e2x2;}
+    float SCRawE()                  const {return this->superCluster()->rawEnergy();}
+    float etaWidth()                const {return this->superCluster()->etaWidth();}
+    float phiWidth()                const {return this->superCluster()->phiWidth();}
+    float covIEtaIPhi()             const {return full5x5_showerShapeBlock_.sigmaIetaIphi;}
+    float scEta()                   const {return this->superCluster()->eta();}
+    float esEffSigmaRR()            const {return full5x5_showerShapeBlock_.effSigmaRR;}
+    float esEnergyOverRawE()        const {return this->superCluster()->preshowerEnergy()/this->superCluster()->rawEnergy();}
+
+./install_UL.sh
+
+
+
+
 ##git cms-merge-topic asculac:Electron_XGBoost_MVA_16UL_17UL
 
 git cms-addpkg GeneratorInterface/RivetInterface
@@ -40,24 +63,6 @@ mv EgammaPostRecoTools/python/EgammaPostRecoTools.py RecoEgamma/EgammaTools/pyth
 
 git clone -b ULSSfiles_correctScaleSysMC https://github.com/jainshilpi/EgammaAnalysis-ElectronTools.git EgammaAnalysis/ElectronTools/data/
 (scram b clean)
-
-mv UFHZZAnalysisRun2/install_UL.sh .
-
-git cms-addpkg DataFormats/EgammaCandidates
-
-vi DataFormats/EGammaCandidates/interface/photon.h
-    /// variables added for MVA
-    float e2x2()                    const {return showerShapeBlock_.e2x2;}
-    float full5x5_e2x2()            const {return full5x5_showerShapeBlock_.e2x2;}
-    float SCRawE()                  const {return this->superCluster()->rawEnergy();}
-    float etaWidth()                const {return this->superCluster()->etaWidth();}
-    float phiWidth()                const {return this->superCluster()->phiWidth();}
-    float covIEtaIPhi()             const {return full5x5_showerShapeBlock_.sigmaIetaIphi;}
-    float scEta()                   const {return this->superCluster()->eta();}
-    float esEffSigmaRR()            const {return full5x5_showerShapeBlock_.effSigmaRR;}
-    float esEnergyOverRawE()        const {return this->superCluster()->preshowerEnergy()/this->superCluster()->rawEnergy();}
-
-./install_UL.sh 
 
 git cms-addpkg EgammaAnalysis/ElectronTools
 
