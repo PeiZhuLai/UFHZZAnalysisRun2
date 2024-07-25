@@ -45,6 +45,10 @@ mv mv UFHZZAnalysisRun2/install_UL.sh .
 
 ./install_UL.sh 
 
+add git cms-addpkg DataFormats/EgammaCandidates
+into EGammaCandidates/interface/photon.h
+
+
 git cms-addpkg EgammaAnalysis/ElectronTools
 
 git cms-addpkg  RecoJets/JetProducers
