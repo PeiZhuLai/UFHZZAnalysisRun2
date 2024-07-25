@@ -45,8 +45,20 @@ mv mv UFHZZAnalysisRun2/install_UL.sh .
 
 ./install_UL.sh 
 
-add git cms-addpkg DataFormats/EgammaCandidates
-into EGammaCandidates/interface/photon.h
+git cms-addpkg DataFormats/EgammaCandidates
+
+write DataFormats/EGammaCandidates/interface/photon.h
+    /// variables added for MVA
+    float e2x2()                    const {return showerShapeBlock_.e2x2;}
+    float full5x5_e2x2()            const {return full5x5_showerShapeBlock_.e2x2;}
+    float SCRawE()                  const {return this->superCluster()->rawEnergy();}
+    float etaWidth()                const {return this->superCluster()->etaWidth();}
+    float phiWidth()                const {return this->superCluster()->phiWidth();}
+    float covIEtaIPhi()             const {return full5x5_showerShapeBlock_.sigmaIetaIphi;}
+    float scEta()                   const {return this->superCluster()->eta();}
+    float esEffSigmaRR()            const {return full5x5_showerShapeBlock_.effSigmaRR;}
+    float esEnergyOverRawE()        const {return this->superCluster()->preshowerEnergy()/this->superCluster()->rawEnergy();}
+
 
 
 git cms-addpkg EgammaAnalysis/ElectronTools
