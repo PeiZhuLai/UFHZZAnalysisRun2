@@ -6,11 +6,11 @@ To install:
 
 SCRAM_ARCH=slc7_amd64_gcc700; export SCRAM_ARCH
 
+cmssw-el7
+
 cmsrel CMSSW_10_6_26
 
 cd CMSSW_10_6_26/src/
-
-cmssw-el7
 
 cmsenv
 
@@ -41,13 +41,11 @@ mv EgammaPostRecoTools/python/EgammaPostRecoTools.py RecoEgamma/EgammaTools/pyth
 git clone -b ULSSfiles_correctScaleSysMC https://github.com/jainshilpi/EgammaAnalysis-ElectronTools.git EgammaAnalysis/ElectronTools/data/
 (scram b clean)
 
-mv mv UFHZZAnalysisRun2/install_UL.sh .
-
-./install_UL.sh 
+mv UFHZZAnalysisRun2/install_UL.sh .
 
 git cms-addpkg DataFormats/EgammaCandidates
 
-write DataFormats/EGammaCandidates/interface/photon.h
+vi DataFormats/EGammaCandidates/interface/photon.h
     /// variables added for MVA
     float e2x2()                    const {return showerShapeBlock_.e2x2;}
     float full5x5_e2x2()            const {return full5x5_showerShapeBlock_.e2x2;}
@@ -59,7 +57,7 @@ write DataFormats/EGammaCandidates/interface/photon.h
     float esEffSigmaRR()            const {return full5x5_showerShapeBlock_.effSigmaRR;}
     float esEnergyOverRawE()        const {return this->superCluster()->preshowerEnergy()/this->superCluster()->rawEnergy();}
 
-
+./install_UL.sh 
 
 git cms-addpkg EgammaAnalysis/ElectronTools
 
