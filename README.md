@@ -18,10 +18,6 @@ git cms-init
 
 git clone -b UL_10_6_26 https://github.com/PeiZhuLai/UFHZZAnalysisRun2.git
 
-cp UFHZZAnalysisRun2/install_UL.sh .
-
-./install_UL.sh
-
 git cms-addpkg DataFormats/EgammaCandidates
 
 vi /DataFormats/EGammaCandidates/interface/photon.h
@@ -37,6 +33,8 @@ vi /DataFormats/EGammaCandidates/interface/photon.h
     float esEnergyOverRawE()        const {return this->superCluster()->preshowerEnergy()/this->superCluster()->rawEnergy();}
 
 scram b clean
+
+cp UFHZZAnalysisRun2/install_UL.sh .
 
 ./install_UL.sh
 
