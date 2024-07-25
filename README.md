@@ -14,7 +14,7 @@ cmsenv
 
 git cms-init
 
-git clone -b UL_10_6_26 https://github.com/zebingwang/UFHZZAnalysisRun2.git
+git clone -b UL_10_6_26 https://github.com/PeiZhuLai/UFHZZAnalysisRun2.git
 
 ##git cms-merge-topic asculac:Electron_XGBoost_MVA_16UL_17UL
 
