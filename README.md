@@ -10,6 +10,8 @@ cmsrel CMSSW_10_6_26
 
 cd CMSSW_10_6_26/src/
 
+cmssw-el7
+
 cmsenv
 
 git cms-init
