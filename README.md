@@ -33,6 +33,7 @@ git cms-addpkg RecoEgamma/EgammaTools
 git clone https://github.com/cms-egamma/EgammaPostRecoTools.git
 
 mv EgammaPostRecoTools/python/EgammaPostRecoTools.py RecoEgamma/EgammaTools/python/.
+(mv: cannot move 'EgammaPostRecoTools/python/EgammaPostRecoTools.py' to 'RecoEgamma/EgammaTools/python/.': No such file or directory) 
 
 #git clone https://github.com/cms-data/EgammaAnalysis-ElectronTools.git EgammaAnalysis/ElectronTools/data/
 
