@@ -38,8 +38,11 @@ cp UFHZZAnalysisRun2/install_UL.sh .
 
 ./install_UL.sh
 
+voms-proxy-init --rfc --voms cms
+
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2016ULAPV_cfg_ALP.py
 
+==============================================================
 
 ##git cms-merge-topic asculac:Electron_XGBoost_MVA_16UL_17UL
 
