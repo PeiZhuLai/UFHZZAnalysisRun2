@@ -21,6 +21,7 @@ git clone -b UL_10_6_26 https://github.com/PeiZhuLai/UFHZZAnalysisRun2.git
 git cms-addpkg DataFormats/EgammaCandidates
 
 vi /DataFormats/EGammaCandidates/interface/photon.h
+
     /// variables added for MVA
     float e2x2()                    const {return showerShapeBlock_.e2x2;}
     float full5x5_e2x2()            const {return full5x5_showerShapeBlock_.e2x2;}
