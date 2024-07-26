@@ -40,7 +40,22 @@ cp UFHZZAnalysisRun2/install_UL.sh .
 
 voms-proxy-init --rfc --voms cms
 
+cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2016UL_cfg_ALP.py
+
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2016ULAPV_cfg_ALP.py
+
+cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2017UL_cfg_ALP.py
+
+cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2018UL_cfg_ALP.py
+
+cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateMC_106X_2016UL_cfg_ALP.py
+
+cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateMC_106X_2016ULAPV_cfg_ALP.py
+
+cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateMC_106X_2017UL_cfg_ALP.py
+
+cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateMC_106X_2018UL_cfg_ALP.py
+
 
 ==============================================================
 
