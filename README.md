@@ -41,6 +41,12 @@ cp UFHZZAnalysisRun2/install_UL.sh .
 
 voms-proxy-init --rfc --voms cms
 
+cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/Sync_106X_2018UL_cfg_ALP.py
+
+=============================================================================
+
+# For crab
+
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2016UL_cfg_ALP.py
 
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2016ULAPV_cfg_ALP.py
