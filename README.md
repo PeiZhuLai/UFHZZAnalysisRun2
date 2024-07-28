@@ -2,7 +2,7 @@ HZZ Analyzer for CMS Run2 UL
 
 ------
 
-### To install:
+# To install:
 
 SCRAM_ARCH=slc7_amd64_gcc700; export SCRAM_ARCH
 
