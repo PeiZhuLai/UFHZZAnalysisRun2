@@ -33,7 +33,7 @@ vi /DataFormats/EGammaCandidates/interface/photon.h
     float esEffSigmaRR()            const {return full5x5_showerShapeBlock_.effSigmaRR;}
     float esEnergyOverRawE()        const {return this->superCluster()->preshowerEnergy()/this->superCluster()->rawEnergy();}
 
-scram b clean
+scram b clean (scramv1 b -j 8)
 
 cp UFHZZAnalysisRun2/install_UL.sh .
 
@@ -41,11 +41,30 @@ cp UFHZZAnalysisRun2/install_UL.sh .
 
 voms-proxy-init --rfc --voms cms
 
+#### For test
+
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/Sync_106X_2018UL_cfg_ALP.py
 
-=============================================================================
+#### Submit Crab
 
-# For crab
+cp UFHZZAnalysisRun2/Utilities/crab/* .
+
+voms-proxy-init --valid=168:00 #probably need "voms-proxy-init --rfc --voms cms"
+
+source /cvmfs/cms.cern.ch/crab3/crab.sh
+
+For Data:
+
+python SubmitCrabJobs.py -t "myTask_Data" -d Sample_2018_data_UL.txt -c UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2018UL_cfg_ALP.py
+
+For MC: 
+
+python SubmitCrabJobs.py -t "myTask_MC" -d Sample_2018_bkg_UL.txt -c UFHZZAnalysisRun2/UFHZZ4LAna/python/templateMC_106X_2018UL_cfg_ALP.py
+python SubmitCrabJobs.py -t "myTask_MC" -d Sample_2018_sig_UL.txt -c UFHZZAnalysisRun2/UFHZZ4LAna/python/templateMC_106X_2018UL_cfg_ALP.py
+
+==============================================================
+
+##### For crab
 
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2016UL_cfg_ALP.py
 
@@ -62,55 +81,6 @@ cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateMC_106X_2016ULAPV_cfg_ALP.py
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateMC_106X_2017UL_cfg_ALP.py
 
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateMC_106X_2018UL_cfg_ALP.py
-
-
-==============================================================
-
-##git cms-merge-topic asculac:Electron_XGBoost_MVA_16UL_17UL
-
-git cms-addpkg GeneratorInterface/RivetInterface
-
-git cms-addpkg SimDataFormats/HTXS
-
-git cms-addpkg RecoEgamma/PhotonIdentification
-
-git cms-addpkg RecoEgamma/ElectronIdentification
-
-git cms-merge-topic cms-egamma:EgammaPostRecoTools
-
-git cms-addpkg RecoEgamma/EgammaTools
-
-git clone https://github.com/cms-egamma/EgammaPostRecoTools.git
-
-mv EgammaPostRecoTools/python/EgammaPostRecoTools.py RecoEgamma/EgammaTools/python/.
-
-#git clone https://github.com/cms-data/EgammaAnalysis-ElectronTools.git EgammaAnalysis/ElectronTools/data/
-
-git clone -b ULSSfiles_correctScaleSysMC https://github.com/jainshilpi/EgammaAnalysis-ElectronTools.git EgammaAnalysis/ElectronTools/data/
-(scram b clean)
-
-git cms-addpkg EgammaAnalysis/ElectronTools
-
-git cms-addpkg  RecoJets/JetProducers
-
-git cms-addpkg PhysicsTools/PatAlgos/
-
-git clone -b v2.3.5 https://github.com/JHUGen/JHUGenMELA
-
-sh JHUGenMELA/MELA/setup.sh -j 8
-
-git clone https://github.com/bachtis/Analysis.git -b KaMuCa_V4 KaMuCa
-
-git clone -b tmp_Ferrico https://github.com/ferrico/KinZfitter.git
-
-scramv1 b -j 8
-(SCRAM fatal: Unable to locate the top of local release. Please run this command from a SCRAM-based area.)
-
-voms-proxy-init --rfc --voms cms
-
-cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/Sync_106X_2018UL_cfg.py
-
-cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/Sync_106X_2017UL_cfg.py
 
 ==============================================================
 
