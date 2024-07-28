@@ -63,7 +63,6 @@ python SubmitCrabJobs.py -t "MC_2018_bkg" -d Sample_2018_bkg_UL.txt -c UFHZZAnal
 python SubmitCrabJobs.py -t "MC_2018_sig" -d Sample_2018_sig_UL.txt -c UFHZZAnalysisRun2/UFHZZ4LAna/python/templateMC_106X_2018UL_cfg_ALP.py
 
 ==============================================================
-
 #### For crab
 
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2016UL_cfg_ALP.py
