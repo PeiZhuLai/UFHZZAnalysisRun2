@@ -1,4 +1,4 @@
-HZZ Analyzer for CMS Run2 UL
+HZaTo2l2g Analyzer for CMS Run2 UL
 
 ***
 
