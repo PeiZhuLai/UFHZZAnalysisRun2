@@ -1,6 +1,6 @@
 HZZ Analyzer for CMS Run2 UL
 
-------
+***
 
 # To install:
 
@@ -75,7 +75,6 @@ python SubmitCrabJobs.py -t "MC_2018_sig" -d UFHZZAnalysisRun2/Sample_2018_sig_U
 
 ***
 
-==============================================================
 #### For crab
 
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2016UL_cfg_ALP.py
@@ -94,7 +93,7 @@ cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateMC_106X_2017UL_cfg_ALP.py
 
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateMC_106X_2018UL_cfg_ALP.py
 
-==============================================================
+***
 
 # pre-existing
 
