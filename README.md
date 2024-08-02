@@ -22,6 +22,7 @@ git cms-addpkg DataFormats/EgammaCandidates
 
 vi /DataFormats/EGammaCandidates/interface/photon.h
 
+```
     /// variables added for MVA
     float e2x2()                    const {return showerShapeBlock_.e2x2;}
     float full5x5_e2x2()            const {return full5x5_showerShapeBlock_.e2x2;}
@@ -32,6 +33,7 @@ vi /DataFormats/EGammaCandidates/interface/photon.h
     float scEta()                   const {return this->superCluster()->eta();}
     float esEffSigmaRR()            const {return full5x5_showerShapeBlock_.effSigmaRR;}
     float esEnergyOverRawE()        const {return this->superCluster()->preshowerEnergy()/this->superCluster()->rawEnergy();}
+```
 
 scram b clean (scramv1 b -j 8)
 
