@@ -47,13 +47,9 @@ cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/Sync_106X_2018UL_cfg_ALP.py
 
 ### Submit Crab
 
-cp UFHZZAnalysisRun2/Utilities/crab/* .
+cp UFHZZAnalysisRun2/Utilities/crab/* . 
 
-delete 
-
-***
-delte "from CRABClient.UserUtilities import config, getUsernameFromCRIC" in crabConfig_TEMPLATE.py
-***
+delete "from CRABClient.UserUtilities import config, getUsernameFromCRIC" in crabConfig_TEMPLATE.py
 
 voms-proxy-init --valid=168:00 #probably need "voms-proxy-init --rfc --voms cms"
 
