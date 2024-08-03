@@ -89,6 +89,14 @@ python -u manageCrabTask.py -t resultsAna_MC_2018_bkg --report --status
 
 python -u manageCrabTask.py -t resultsAna_MC_2018_sig --report --status
 
+#### Kill
+
+python -u manageCrabTask.py -t resultsAna_Data_2018 -k
+
+python -u manageCrabTask.py -t resultsAna_MC_2018_bkg -k
+
+python -u manageCrabTask.py -t resultsAna_MC_2018_sig -k
+
 #### Resubmit
 
 nohup python -u manageCrabTask.py -t resultsAna_Data_2018 -r -l >& managedata_Data_2018.log &
