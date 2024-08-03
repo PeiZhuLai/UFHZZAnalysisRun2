@@ -103,6 +103,16 @@ ps xw
 
 kill PID
 
+#### Clean Crab cahe
+
+Once all of your tasks are done, you should run the following command to purge your crab cache so that it doesn't fill up:
+
+python manageCrabTask.py -t resultsAna_Data_2018 -p
+
+python manageCrabTask.py -t resultsAna_MC_2018_bkg -p
+
+python manageCrabTask.py -t resultsAna_MC_2018_sig -p
+
 #### For crab
 
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2016UL_cfg_ALP.py
