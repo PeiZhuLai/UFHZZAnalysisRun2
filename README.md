@@ -77,7 +77,19 @@ python SubmitCrabJobs.py -t "MC_2018_sig" -d UFHZZAnalysisRun2/Sample_2018_sig_U
 
 ### Check for Crab Running Status
 
+voms-proxy-init -voms cms
+
 voms-proxy-init --valid=168:00
+
+#### Check for the Status
+
+python -u manageCrabTask.py -t resultsAna_Data_2018 --report --status
+
+python -u manageCrabTask.py -t resultsAna_MC_2018_bkg --report --status
+
+python -u manageCrabTask.py -t resultsAna_MC_2018_sig --report --status
+
+#### Resubmit
 
 nohup python -u manageCrabTask.py -t resultsAna_Data_2018 -r -l >& managedata_Data_2018.log &
 
@@ -85,13 +97,11 @@ nohup python -u manageCrabTask.py -t resultsAna_MC_2018_bkg -r -l >& managedata_
 
 nohup python -u manageCrabTask.py -t resultsAna_MC_2018_sig -r -l >& managedata_MC_2018_sig.log &
 
-#### Check for nohup PID
+#### Check for nohup PIDs
 
-HISPID=$!
+ps xw
 
-ps -p $HISPID
-
-kill -0 $HISPID
+kill PID
 
 #### For crab
 
