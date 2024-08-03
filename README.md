@@ -75,6 +75,15 @@ python SubmitCrabJobs.py -t "MC_2018_sig" -d UFHZZAnalysisRun2/Sample_2018_sig_U
 
 ***
 
+### Check for Crab Running Status
+
+nohup python -u manageCrabTask.py -t resultsAna_Data_2018 -r -l >& managedata_Data_2018.log &
+
+nohup python -u manageCrabTask.py -t resultsAna_MC_2018_bkg -r -l >& managedata_MC_2018_bkg.log &
+
+nohup python -u manageCrabTask.py -t resultsAna_MC_2018_sig -r -l >& managedata_MC_2018_sig.log &
+
+
 #### For crab
 
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2016UL_cfg_ALP.py
