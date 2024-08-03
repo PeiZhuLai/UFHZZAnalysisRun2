@@ -86,6 +86,8 @@ voms-proxy-init --valid=168:00
 
 #### Check for the Status
 
+Please use ' crab status -d resultsAna_Data_2018/crab_SingleMuon_Run2018A-UL2018_MiniAODv2-v3 ' to check how the submission process proceeds.
+
 python -u manageCrabTask.py -t resultsAna_Data_2018 --report --status
 
 python -u manageCrabTask.py -t resultsAna_MC_2018_bkg --report --status
