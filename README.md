@@ -41,12 +41,14 @@ cp UFHZZAnalysisRun2/install_UL.sh .
 
 ./install_UL.sh
 
+```
 voms-proxy-init --rfc --voms cms
+```
 
 ### For test
-
+```
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/Sync_106X_2018UL_cfg_ALP.py
-
+```
 ### Submit Crab
 
 cp UFHZZAnalysisRun2/Utilities/crab/* . 
@@ -58,9 +60,12 @@ from CRABClient.UserUtilities import config, getUsernameFromCRIC
 
 config.General.failureLimit=1
 ```
-
-voms-proxy-init --valid=168:00 #probably need "voms-proxy-init --rfc --voms cms"
-
+```
+voms-proxy-init --rfc --voms cms
+```
+```
+voms-proxy-init --valid=168:00 
+```
 source /cvmfs/cms.cern.ch/crab3/crab.sh
 
 #### For Data:
