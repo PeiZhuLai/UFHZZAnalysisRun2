@@ -108,13 +108,15 @@ python -u manageCrabTask.py -t resultsAna_MC_2018_sig -k
 ```
 
 #### Resubmit
-
+```
 nohup python -u manageCrabTask.py -t resultsAna_Data_2018 -r -l >& managedata_Data_2018.log &
-
+```
+```
 nohup python -u manageCrabTask.py -t resultsAna_MC_2018_bkg -r -l >& managedata_MC_2018_bkg.log &
-
+```
+```
 nohup python -u manageCrabTask.py -t resultsAna_MC_2018_sig -r -l >& managedata_MC_2018_sig.log &
-
+```
 #### Check for nohup PIDs
 
 ps xw
