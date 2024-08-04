@@ -79,28 +79,33 @@ python SubmitCrabJobs.py -t "MC_2018_sig" -d UFHZZAnalysisRun2/Sample_2018_sig_U
 ***
 
 ### Check for Crab Running Status
-
+```
 voms-proxy-init -voms cms
-
+```
 voms-proxy-init --valid=168:00
 
 #### Check for the Status
 
 Please use ' crab status -d resultsAna_Data_2018/crab_SingleMuon_Run2018A-UL2018_MiniAODv2-v3 ' to check how the submission process proceeds.
-
+```
 python -u manageCrabTask.py -t resultsAna_Data_2018 --report --status
-
+```
+```
 python -u manageCrabTask.py -t resultsAna_MC_2018_bkg --report --status
-
+```
+```
 python -u manageCrabTask.py -t resultsAna_MC_2018_sig --report --status
-
+```
 #### Kill
-
+```
 python -u manageCrabTask.py -t resultsAna_Data_2018 -k
-
+```
+```
 python -u manageCrabTask.py -t resultsAna_MC_2018_bkg -k
-
+```
+```
 python -u manageCrabTask.py -t resultsAna_MC_2018_sig -k
+```
 
 #### Resubmit
 
