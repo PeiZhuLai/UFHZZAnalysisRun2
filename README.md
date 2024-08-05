@@ -6,9 +6,9 @@ HZaTo2l2g Analyzer for CMS Run2 UL
 
 SCRAM_ARCH=slc7_amd64_gcc700; export SCRAM_ARCH
 
-cmssw-el7
-
 cmsrel CMSSW_10_6_26
+
+cmssw-el7
 
 cd CMSSW_10_6_26/src/
 
