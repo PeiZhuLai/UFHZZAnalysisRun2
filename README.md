@@ -143,6 +143,10 @@ python manageCrabTask.py -t resultsAna_MC_2018_sig -p
 Notice: re-login your account without CMSSW environment (Need not cmsenv)
 
 ```
+voms-proxy-init -voms cms
+```
+
+```
 gfal-ls -l https://cceos.ihep.ac.cn:9000/eos/ihep/cms/store/user/pelai
 ```
 
