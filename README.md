@@ -46,6 +46,9 @@ voms-proxy-init --rfc --voms cms
 ```
 
 ### For test
+
+Test file: Sync_106X_2018UL_cfg_ALP.py
+Submit file to crab: e.g. templateData_106X_2016UL_cfg_ALP.py or templateMC_106X_2016UL_cfg_ALP.py
 ```
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/Sync_106X_2018UL_cfg_ALP.py
 ```
@@ -87,8 +90,9 @@ nohup python SubmitCrabJobs.py -t "MC_2018_sig" -d UFHZZAnalysisRun2/Sample_2018
 ```
 voms-proxy-init -voms cms
 ```
+```
 voms-proxy-init --valid=168:00
-
+```
 #### Check for the Status
 
 Please use ' crab status -d resultsAna_Data_2018/crab_SingleMuon_Run2018A-UL2018_MiniAODv2-v3 ' to check how the submission process proceeds.
@@ -138,7 +142,7 @@ python manageCrabTask.py -t resultsAna_MC_2018_bkg -p
 
 python manageCrabTask.py -t resultsAna_MC_2018_sig -p
 
-#### See your Crab Output file
+#### See Crab Output Files
 
 Notice: re-login your account without CMSSW environment (Need not cmsenv)
 
@@ -146,13 +150,13 @@ Notice: re-login your account without CMSSW environment (Need not cmsenv)
 voms-proxy-init -voms cms
 ```
 
-#### See your Crab Output file
+#### See Crab Output Files
 
 ```
 gfal-ls -l https://cceos.ihep.ac.cn:9000/eos/ihep/cms/store/user/pelai
 ```
 
-#### Delete your Crab Output file
+#### Delete Crab Output Files
 
 ```
 gfal-rm -r https://cceos.ihep.ac.cn:9000/eos/ihep/cms/store/user/pelai/<file_or_dir_to_delete>
@@ -168,30 +172,14 @@ example path:
 ```
 ls /publicfs/cms/user/wangzebing/ALP/NTuples/UL
 ```
-install the same .p12
+install the same CERN mycert.p12 file certificate to IHEP home directory
+```
+voms-proxy-init -voms cms
+```
+If it occurs errors, please contact IHEP computing center, 张玄同 "zhangxuantong@ihep.ac.cn"
 ```
 gfal-copy https://cceos.ihep.ac.cn:9000/eos/ihep/cms/store/user/pelai/MC_2018_sig/HZaTo2l2g_M1_TuneCP5_PSWeights_13TeV-madgraph_pythia8/crab_HZaTo2l2g_M1_TuneCP5_PSWeights_13TeV-madgraph_pythia8_RunIISummer20UL18MiniAODv2-106X/240803_143219 laipeizhu@lxlogin.ihep.ac.cn:/publicfs/cms/user/laipeizhu/ALP/NTuples/UL/18/mc
 ```
-
-#### For crab
-
-cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2016UL_cfg_ALP.py
-
-cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2016ULAPV_cfg_ALP.py
-
-cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2017UL_cfg_ALP.py
-
-cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2018UL_cfg_ALP.py
-
-cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateMC_106X_2016UL_cfg_ALP.py
-
-cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateMC_106X_2016ULAPV_cfg_ALP.py
-
-cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateMC_106X_2017UL_cfg_ALP.py
-
-cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateMC_106X_2018UL_cfg_ALP.py
-
-***
 
 # pre-existing
 
