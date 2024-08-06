@@ -146,13 +146,20 @@ Notice: re-login your account without CMSSW environment (Need not cmsenv)
 voms-proxy-init -voms cms
 ```
 
+#### See your Crab Output file
+
 ```
 gfal-ls -l https://cceos.ihep.ac.cn:9000/eos/ihep/cms/store/user/pelai
 ```
 
-#### See your Crab Output file
+#### Delete your Crab Output file
+
 ```
 gfal-rm -r https://cceos.ihep.ac.cn:9000/eos/ihep/cms/store/user/pelai/<file_or_dir_to_delete>
+```
+without output info
+```
+gfal-rm -r https://cceos.ihep.ac.cn:9000/eos/ihep/cms/store/user/pelai/<file_or_dir_to_delete> >out.log 2>&1 &
 ```
 
 #### For crab
