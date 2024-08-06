@@ -162,6 +162,17 @@ without output info
 gfal-rm -r https://cceos.ihep.ac.cn:9000/eos/ihep/cms/store/user/pelai/<file_or_dir_to_delete> >out.log 2>&1 &
 ```
 
+#### Translate to Tier-3
+
+example path: 
+```
+ls /publicfs/cms/user/wangzebing/ALP/NTuples/UL
+```
+
+```
+gfal-copy https://cceos.ihep.ac.cn:9000/eos/ihep/cms/store/user/pelai/MC_2018_sig/HZaTo2l2g_M1_TuneCP5_PSWeights_13TeV-madgraph_pythia8/crab_HZaTo2l2g_M1_TuneCP5_PSWeights_13TeV-madgraph_pythia8_RunIISummer20UL18MiniAODv2-106X/240803_143219 laipeizhu@lxlogin.ihep.ac.cn:/publicfs/cms/user/laipeizhu/ALP/NTuples/UL/18/mc
+```
+
 #### For crab
 
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2016UL_cfg_ALP.py
