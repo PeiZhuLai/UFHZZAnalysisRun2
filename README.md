@@ -169,13 +169,13 @@ without output info
 gfal-rm -r https://cceos.ihep.ac.cn:9000/eos/ihep/cms/store/user/pelai/<file_or_dir_to_delete> >out.log 2>&1 &
 ```
 
-#### Translate to Tier-3
+#### Translate to Tier-3 (Operate on the IHEP Server)
 
-example path: 
+example file structure path: 
 ```
 ls /publicfs/cms/user/wangzebing/ALP/NTuples/UL
 ```
-install the same CERN mycert.p12 file certificate to IHEP home directory
+Install the same CERN mycert.p12 file certification on IHEP home directory
 ```
 voms-proxy-init -voms cms
 ```
