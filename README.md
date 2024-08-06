@@ -64,13 +64,15 @@ from CRABClient.UserUtilities import config, getUsernameFromCRIC
 
 config.General.failureLimit=1
 ```
+
+source /cvmfs/cms.cern.ch/crab3/crab.sh
+
 ```
 voms-proxy-init --rfc --voms cms
 ```
 ```
 voms-proxy-init --valid=168:00 
 ```
-source /cvmfs/cms.cern.ch/crab3/crab.sh
 
 #### For Data:
 
