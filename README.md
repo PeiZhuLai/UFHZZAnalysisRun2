@@ -168,7 +168,7 @@ example path:
 ```
 ls /publicfs/cms/user/wangzebing/ALP/NTuples/UL
 ```
-
+install the same .p12
 ```
 gfal-copy https://cceos.ihep.ac.cn:9000/eos/ihep/cms/store/user/pelai/MC_2018_sig/HZaTo2l2g_M1_TuneCP5_PSWeights_13TeV-madgraph_pythia8/crab_HZaTo2l2g_M1_TuneCP5_PSWeights_13TeV-madgraph_pythia8_RunIISummer20UL18MiniAODv2-106X/240803_143219 laipeizhu@lxlogin.ihep.ac.cn:/publicfs/cms/user/laipeizhu/ALP/NTuples/UL/18/mc
 ```
