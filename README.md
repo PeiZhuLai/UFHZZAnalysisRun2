@@ -138,6 +138,16 @@ python manageCrabTask.py -t resultsAna_MC_2018_bkg -p
 
 python manageCrabTask.py -t resultsAna_MC_2018_sig -p
 
+#### See your Crab Output file
+```
+gfal-ls -l https://cceos.ihep.ac.cn:9000/eos/ihep/cms/store/user/pelai
+```
+
+#### See your Crab Output file
+```
+gfal-rm -r https://cceos.ihep.ac.cn:9000/eos/ihep/cms/store/user/pelai/<file_or_dir_to_delete>
+```
+
 #### For crab
 
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/templateData_106X_2016UL_cfg_ALP.py
