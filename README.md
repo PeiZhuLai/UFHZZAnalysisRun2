@@ -173,7 +173,7 @@ gfal-rm -r https://cceos.ihep.ac.cn:9000/eos/ihep/cms/store/user/pelai/<file_or_
 
 example file structure path: 
 ```
-ls /publicfs/cms/user/wangzebing/ALP/NTuples/UL
+cd /publicfs/cms/user/wangzebing/ALP/NTuples/UL
 ```
 Install the same CERN mycert.p12 file certification on IHEP home directory
 ```
