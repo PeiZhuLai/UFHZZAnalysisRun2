@@ -54,6 +54,7 @@ Submit file to crab: e.g. templateData_106X_2016UL_cfg_ALP.py or templateMC_106X
 cmsRun UFHZZAnalysisRun2/UFHZZ4LAna/python/Sync_106X_2018UL_cfg_ALP.py
 ```
 ### Submit Crab
+In python file: 
 
 cp UFHZZAnalysisRun2/Utilities/crab/* . 
 
